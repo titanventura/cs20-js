@@ -3,17 +3,19 @@ let player_rock = document.getElementById("rock");
 let player_paper = document.getElementById("paper")
 let player_scissor = document.getElementById("scissor")
 
+let info = document.getElementById("info");
+
  //Player => Rock
 player_rock.addEventListener("click",function(){
 	
 	cpu_element = get_cpu_element();
 
 	if(cpu_element == 1) {
-		console.log("TIE");
+		info.textContent = "TIE!";
 	} else if(cpu_element == 2) {
-		console.log("CPU wins!");
+		info.textContent = "CPU wins!";
 	} else if(cpu_element == 3) {
-		console.log("Player wins!");
+		info.textContent = "Player wins!";	
 	}
 
 })
@@ -24,11 +26,11 @@ player_paper.addEventListener("click",function(){
 	cpu_element = get_cpu_element();
 
 	if(cpu_element == 2) {
-		console.log("TIE");
+		info.textContent = "TIE!";
 	} else if(cpu_element == 3) {
-		console.log("CPU wins!");
+		info.textContent = "CPU wins!";
 	} else if(cpu_element == 1) {
-		console.log("Player wins!");
+		info.textContent = "Player wins!";
 	}
 })
 
@@ -38,11 +40,11 @@ player_scissor.addEventListener("click",function(){
 	cpu_element = get_cpu_element();
 
 	if(cpu_element == 3) {
-		console.log("TIE");
+		info.textContent = "TIE!";
 	} else if(cpu_element == 1) {
-		console.log("CPU wins!");
+		info.textContent = "CPU wins!";
 	} else if(cpu_element == 2) {
-		console.log("Player wins!");
+		info.textContent = "Player wins!";
 	}
 })
 
