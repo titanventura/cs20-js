@@ -82,6 +82,10 @@ main{
     width: 70px;
 }
 
+#info img{
+    width: 100px;
+}
+
 #human_image p{
     text-align: center;
 }
@@ -94,4 +98,23 @@ main{
 #info{
     margin: 100px 0px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+}
+
+#infovs {
+    color: darkorchid;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#wintext {
+    color: darkorange;
+    font-weight: 800;
+}
+
+.midinfo {
+    width: 95px;
 }

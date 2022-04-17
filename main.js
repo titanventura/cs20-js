@@ -3,7 +3,7 @@ let player_rock = document.getElementById("rock");
 let player_paper = document.getElementById("paper")
 let player_scissor = document.getElementById("scissor")
 
-let info = document.getElementById("info");
+let info = document.getElementById("wintext");
 
 let player_score = document.getElementById("human_score");
 let cpu_score = document.getElementById("computer_score");
