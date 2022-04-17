@@ -112,6 +112,7 @@ player_scissor.addEventListener("click",function(){
 })
 
 function get_cpu_element() {
+	
 	// 1 ==> rock; 2 ==> paper; 3 ==> scissor 
 	let cpu_element = Math.floor((Math.random() * 3) + 1);
 
