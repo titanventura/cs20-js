@@ -15,12 +15,15 @@ player_rock.addEventListener("click",function(){
 
 	if(cpu_element == 1) {
 		info.textContent = "TIE!";
+		info.style.color = "darkorange";
 	} else if(cpu_element == 2) {
 		info.textContent = "CPU wins!";
 		cpu_score.textContent = parseInt(cpu_score.textContent) + 1;
+		info.style.color = "red";
 	} else if(cpu_element == 3) {
 		info.textContent = "Player wins!";
-		player_score.textContent = parseInt(player_score.textContent) + 1;	
+		player_score.textContent = parseInt(player_score.textContent) + 1;
+		info.style.color = "green";
 	}
 
 })
@@ -32,12 +35,15 @@ player_paper.addEventListener("click",function(){
 
 	if(cpu_element == 2) {
 		info.textContent = "TIE!";
+		info.style.color = "darkorange";
 	} else if(cpu_element == 3) {
 		info.textContent = "CPU wins!";
 		cpu_score.textContent = parseInt(cpu_score.textContent) + 1;
+		info.style.color = "red";
 	} else if(cpu_element == 1) {
 		info.textContent = "Player wins!";
 		player_score.textContent = parseInt(player_score.textContent) + 1;
+		info.style.color = "green";
 	}
 })
 
@@ -48,12 +54,15 @@ player_scissor.addEventListener("click",function(){
 
 	if(cpu_element == 3) {
 		info.textContent = "TIE!";
+		info.style.color = "darkorange";
 	} else if(cpu_element == 1) {
 		info.textContent = "CPU wins!";
 		cpu_score.textContent = parseInt(cpu_score.textContent) + 1;
+		info.style.color = "red";
 	} else if(cpu_element == 2) {
 		info.textContent = "Player wins!";
 		player_score.textContent = parseInt(player_score.textContent) + 1;
+		info.style.color = "green";
 	}
 })
 
