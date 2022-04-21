@@ -2,20 +2,6 @@ let human_score=0;
 let computer_score=0;
 
 
-
-if (computer_score>=10){
-	document.getElementById('info').innerHTML='Computer wins';
-	computer_score=0;
-	human_score=0;
-}
-
-
-if (human_score==10){
-	document.getElementById('info').innerHTML='Human wins';
-	computer_score=0;
-	human_score=0;
-}
-
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissor = document.getElementById('scissor');
@@ -35,6 +21,19 @@ rock.addEventListener('click',function() {
 	}
 	document.getElementById('human_score').innerHTML=human_score;
 	document.getElementById('computer_score').innerHTML=computer_score;
+	
+	if (computer_score>=10){
+	document.getElementById('info').innerHTML='Computer wins';
+	computer_score=0;
+	human_score=0;
+	}
+
+
+	if (human_score==10){
+		document.getElementById('info').innerHTML='Human wins';
+		computer_score=0;
+		human_score=0;
+	}
 })
 
 
@@ -53,6 +52,19 @@ paper.addEventListener('click',function() {
 	}
 	document.getElementById('human_score').innerHTML=human_score;
 	document.getElementById('computer_score').innerHTML=computer_score;
+	
+	if (computer_score>=10){
+	document.getElementById('info').innerHTML='Computer wins';
+	computer_score=0;
+	human_score=0;
+	}
+
+
+	if (human_score==10){
+		document.getElementById('info').innerHTML='Human wins';
+		computer_score=0;
+		human_score=0;
+	}
 })
 
 
@@ -71,4 +83,17 @@ scissor.addEventListener('click',function() {
 	}
 	document.getElementById('human_score').innerHTML=human_score;
 	document.getElementById('computer_score').innerHTML=computer_score;
+	
+	if (computer_score>=10){
+	document.getElementById('info').innerHTML='Computer wins';
+	computer_score=0;
+	human_score=0;
+	}
+
+
+	if (human_score==10){
+		document.getElementById('info').innerHTML='Human wins';
+		computer_score=0;
+		human_score=0;
+	}
 })
