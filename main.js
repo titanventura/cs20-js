@@ -1,120 +1,55 @@
-//reference to each element
-let player_rock = document.getElementById("rock");
-let player_paper = document.getElementById("paper")
-let player_scissor = document.getElementById("scissor")
-
-let info = document.getElementById("wintext");
-
-let player_score = document.getElementById("human_score");
-let cpu_score = document.getElementById("computer_score");
-
+//references to html elements
 let player_info = document.getElementById("human_info");
 let cpu_info = document.getElementById("computer_info");
 
- //Player => Rock
-player_rock.addEventListener("click",function(){
-	
-	cpu_element = get_cpu_element();
+let player_score = document.getElementById("human_score");
+let cpu_score = document.getElementById("computer_score");
+let info = document.getElementById("wintext");
 
-	player_info.src = "rock.svg";
-
-	if(cpu_element == 1) {
-		cpu_info.src = "rock.svg";
-
-		info.textContent = "TIE!";
-
-		info.style.color = "darkorange";
-
-	} else if(cpu_element == 2) {
-		cpu_info.src = "paper.svg";
-
-		info.textContent = "CPU wins!";
-		cpu_score.textContent = parseInt(cpu_score.textContent) + 1;
-
-		info.style.color = "red";
-
-	} else if(cpu_element == 3) {
-		cpu_info.src = "scissors.svg";
-
-		info.textContent = "Player wins!";
-		player_score.textContent = parseInt(player_score.textContent) + 1;
-
-		info.style.color = "green";
-
-	}
-
-})
-
-//Player => Paper
-player_paper.addEventListener("click",function(){
-	
-	cpu_element = get_cpu_element();
-
-	player_info.src = "paper.svg";
-
-	if(cpu_element == 2) {
-		cpu_info.src = "paper.svg";
-		
-		info.textContent = "TIE!";
-
-		info.style.color = "darkorange";
-
-	} else if(cpu_element == 3) {
-		cpu_info.src = "scissors.svg";
-
-		info.textContent = "CPU wins!";
-		cpu_score.textContent = parseInt(cpu_score.textContent) + 1;
-
-		info.style.color = "red";
-
-	} else if(cpu_element == 1) {
-		cpu_info.src = "rock.svg";
-
-		info.textContent = "Player wins!";
-		player_score.textContent = parseInt(player_score.textContent) + 1;
-
-		info.style.color = "green";
-
-	}
-})
-
-//Player => Scissor
-player_scissor.addEventListener("click",function(){
-	
-	cpu_element = get_cpu_element();
-
-	player_info.src = "scissors.svg";
-
-	if(cpu_element == 3) {
-		cpu_info.src = "scissors.svg";
-
-		info.textContent = "TIE!";
-
-		info.style.color = "darkorange";
-
-	} else if(cpu_element == 1) {
-		cpu_info.src = "rock.svg";
-
-		info.textContent = "CPU wins!";
-		cpu_score.textContent = parseInt(cpu_score.textContent) + 1;
-
-		info.style.color = "red";
-
-	} else if(cpu_element == 2) {
-		cpu_info.src = "paper.svg";
-
-		info.textContent = "Player wins!";
-		player_score.textContent = parseInt(player_score.textContent) + 1;
-
-		info.style.color = "green";
-
-	}
-})
-
+//generates random choice for cpu
 function get_cpu_element() {
 	
 	// 1 ==> rock; 2 ==> paper; 3 ==> scissor 
 	let cpu_element = Math.floor((Math.random() * 3) + 1);
-
 	return cpu_element;
 }
+
+const elements = ['rock','paper','scissors'];
+
+//reference to the various choices for player
+const player_elements = document.querySelectorAll(".element");
+
+player_elements.forEach(player_element => {
+
+	player_element.addEventListener('click', () => {
+		
+		//Assigns value to the various elements
+		// 1 ==> rock; 2 ==> paper; 3 ==> scissor 
+		let player_element_value = elements.indexOf(player_element.id);
+
+		let cpu_element_value = get_cpu_element() - 1;
+		
+		//changes image to element used by player and cpu
+		player_info.src = elements[player_element_value] + ".svg";
+		cpu_info.src = elements[cpu_element_value] + ".svg";
+
+		//checking win coditions
+		if(player_element_value == cpu_element_value) {
+			info.textContent = "TIE!";
+
+			info.style.color = "darkorange";
+		}
+		else if((player_element_value + 1)%3 == cpu_element_value) {
+			info.textContent = "CPU wins!";
+			cpu_score.textContent = parseInt(cpu_score.textContent) + 1;
+
+			info.style.color = "red";
+		}
+		else if(player_element_value == (cpu_element_value+ 1)%3) {
+			info.textContent = "Player wins!";
+			player_score.textContent = parseInt(player_score.textContent) + 1;
+
+			info.style.color = "green";
+		}
+	})
+})
