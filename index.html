@@ -7,51 +7,53 @@
 		<title>Rock Paper Scissors</title>
 
 		<link rel="stylesheet" href="styles.css" />
+		<script scr="main.js"></script>
 	</head>
-	<body>
+	<body onload="myFunction()">
 		<main>
 			<header class="heading">
 				<h3>Rock . Paper . Scissors</h3>
 			</header>
-
-			<div id="app">
-				<div id="elements">
-					<div id="rock" class="element">
-						<img src="rock.svg" alt="" />
-						<p>Rock</p>
-					</div>
-					<div id="paper" class="element">
-						<img src="paper.svg" alt="" />
-						<p>Paper</p>
-					</div>
-					<div id="scissor" class="element">
-						<img src="scissors.svg" alt="" />
-						<p>Scissor</p>
-					</div>
+	
+                              <!-- Options-->
+				<div id="app">
+					<div id="elements">
+						<div id="rock" class="element">
+				        <button class="options"><img src="rock.png"/></button>
+				        <p>Rock</p>
+				        </div>
+				        <div id="paper" class="element">
+				        <button class="options"><img src="paper.png" /></button>
+				        <p>Paper</p>
+				        </div>
+			            <div id="scissor" class="element">
+				        <button class="options"> <img src="scissors.png" /></button>
+			            <p>Scissor</p>
+			            </div>
+				    </div>
 				</div>
+		
 
-				<div id="info">
-					<!-- <h1>Computer wins</p> -->
-				</div>
-
-				<div id="score_container">
-					<div id="human_image">
-						<img src="man.svg" alt="" />
-						<p>Man</p>
-					</div>
-					<div id="score">
-						<span id="human_score">0</span>
-						<span id="vs">vs</span>
-						<span id="computer_score">0</span>
-					</div>
-					<div id="computer_image">
-						<img src="computer.svg" alt="" />
-						<p>Computer</p>
-					</div>
-				</div>
-			</div>
+			
+<br><br>
+                   <div id="score_container">
+	                    <div id="human_image">
+		                   <img src="man.svg" alt="" />
+		                   <p>Man</p>
+	                    </div>
+	                    <div id="score">
+		                    <span id="human_score">&nbsp&nbsp  0</span>
+		                    <span id="vs">vs</span>
+		                    <span id="computer_score">0  &nbsp&nbsp</span>
+	                    </div>
+	                    <div id="computer_image">
+		                  <img src="computer.svg" alt="" />
+		                  <p>Computer</p>
+	                    </div>
+                    </div>
+			  </div>  
+			
+		
 		</main>
-
-		<script src="main.js"></script>
 	</body>
 </html>
