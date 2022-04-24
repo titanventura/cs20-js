@@ -28,34 +28,35 @@ main{
     margin-top: 50px;
 }
 
+
 #elements{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.element{
+.options{
     padding: 30px;
     border: 2px solid var(--element-border-color);
     border-radius: 10px;
     cursor: pointer;
 }
 
-.element *{
+.options *{
     pointer-events: none;
 }
 
-.element img{
+.options img{
     width: 100px;
-    /* pointer-events: none; */
+     pointer-events: none; 
 }
 
 .element p{
     text-align: center;
-    /* pointer-events: none; */
+   /*  pointer-events: hand; */
 }
 
-.element:hover{
+.options:hover{
     box-shadow:  -1px 1px var(--element-border-color),
          -2px 2px var(--element-border-color),
          -3px 3px var(--element-border-color),
@@ -91,7 +92,7 @@ main{
 }
 
 
-#info{
+/*#info{
     margin: 100px 0px;
     text-align: center;
-}
+}*/
