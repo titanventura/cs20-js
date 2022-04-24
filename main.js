@@ -1,3 +1,9 @@
+
+//const handOptions = {
+	//"rock": "rock.png",
+	//"paper": "paper.png",
+	//"scissors": "scissors.png"
+ // }
 function myFunction()
 {
  const options = document.querySelectorAll(".options");
