@@ -14,44 +14,52 @@
 				<h3>Rock . Paper . Scissors</h3>
 			</header>
 
+
 			<div id="app">
 				<div id="elements">
-					<div id="rock" class="element">
-						<img src="rock.svg" alt="" />
+						<div class="rock">
+						<img src="rock.png"  width="100 px" id="rock">
 						<p>Rock</p>
-					</div>
-					<div id="paper" class="element">
-						<img src="paper.svg" alt="" />
+						</div>
+						<div class="paper">
+							<img src="paper.png" width="100 px" id="paper">
 						<p>Paper</p>
-					</div>
-					<div id="scissor" class="element">
-						<img src="scissors.svg" alt="" />
+					    </div>
+						<div class="scissor">
+							<img src="scissors.png"  width="100 px" id="scissor">
 						<p>Scissor</p>
+					
 					</div>
 				</div>
 
-				<div id="info">
-					<!-- <h1>Computer wins</p> -->
+                <div id="score_container">
+				<div class="stats">
+					<div class="user">
+						<img src="man.svg" width=" 100 px"alt="" />
+						<p>You Win</p>
+						<p id="user-stats">0</p>
+					</div>
+					<span id="vs">vs</span>
+					<div class="computer">
+						<img src="computer.svg" width="100 px" alt="" />
+						<p>Computer Win</p>
+						<p id="computer-stats">0</p>
+					</div>
+				</div>  
+			</div> 
+				<!-- result -->
+				<div class="result">
+					<center><p id="result">Result Unknown</p></center>
 				</div>
-
-				<div id="score_container">
-					<div id="human_image">
-						<img src="man.svg" alt="" />
-						<p>Man</p>
-					</div>
-					<div id="score">
-						<span id="human_score">0</span>
-						<span id="vs">vs</span>
-						<span id="computer_score">0</span>
-					</div>
-					<div id="computer_image">
-						<img src="computer.svg" alt="" />
-						<p>Computer</p>
-					</div>
+				<!-- Riset button -->
+				<div class="riset">
+					<center><button id="reset">Reset</button></center>
 				</div>
 			</div>
-		</main>
+		
 
-		<script src="main.js"></script>
-	</body>
-</html>
+			</main>
+	
+			<script src="main.js"></script>
+		</body>
+	</html> 
