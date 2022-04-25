@@ -1,3 +1,4 @@
+
 :root{
     --element-border-color:#F55353;
     --score-container-border-color:#143F6B;
@@ -94,4 +95,84 @@ main{
 #info{
     margin: 100px 0px;
     text-align: center;
+}
+.stats{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+}
+.result p{
+    font-size: 2em;
+}
+.reset button{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    padding: 10px;
+    border: 0;
+}
+
+#score_container{
+    /* margin-top: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid var(--score-container-border-color);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#score_container span{
+    font-size: 50px;
+    margin:0 20px;
+}
+
+#score_container img{
+    width: 70px;
+}
+#score_container span{
+    font-size: 50px;
+    margin:0 20px;
+}
+#app{
+    width: 100%;
+    margin-top: 50px;
+}
+
+#elements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.element{
+    padding: 30px;
+    border: 2px solid var(--element-border-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.element *{
+    pointer-events: none;
+}
+
+.element img{
+    width: 100px;
+    /* pointer-events: none; */
+}
+
+.element p{
+    text-align: center;
+    /* pointer-events: none; */
+}
+
+.element:hover{
+    box-shadow:  -1px 1px var(--element-border-color),
+         -2px 2px var(--element-border-color),
+         -3px 3px var(--element-border-color),
+         -4px 4px var(--element-border-color),
+         -5px 5px var(--element-border-color);
 }
